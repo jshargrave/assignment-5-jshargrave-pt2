@@ -1,0 +1,22 @@
+#!/bin/sh
+# Date: 3/1/2026
+# Author: Joseph Hargrave
+
+case "$1" in 
+    start)
+        echo "Loading LLD Moduels"
+        scull_load
+        module_load
+        ;;
+    stop)
+        echo "Unloading LLD Modules"
+        scull_unload
+        module_unload
+        ;;
+    *)
+        echo "Usage $0 {start|stop}"
+        exit 1
+        ;;
+esac   
+
+exit 0
